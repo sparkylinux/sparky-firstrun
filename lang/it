@@ -1,0 +1,23 @@
+# File di localizzazione in italiano per Sparky First Run.
+# Copyright 2015 Carlo Troiani <troianicarlo@gmail.com> 24/11/2015
+# Rilasciato sotto licenza GNU GPL v2
+# Last update 2016/04/23 by pavroo
+
+LOCAL1="Il primo utilizzo di Sparky"
+LOCAL2="Esci"
+LOCAL3="È un sistema live e gira sul kernel standard di Debian!\n\nSe preferisci utilizzarre un kernel Linux a bassa latenza come quelli di Liquorix, prima di tutto installa Sparky su di un Hard Drive e poi installa il kernel che preferisci.\n\nSto uscendo..."
+LOCAL4="Grazie per aver scelto di installare Sparky Linux.\n\nQuesto ti permette di:"
+LOCAL5="Aggiornare completamente il sistema (raccomandato)."
+LOCAL6="Installare il kernel Linux i686-pae di Debian (solo per sistemi 32 bit)."
+LOCAL7="Installare un kernel Linux a bassa latenza Liquorix."
+#LOCAL7="Installare un kernel Linux a bassa latenza Liquorix (solamente per le edizioni GameOver e Multimedia)."
+LOCAL8="Installare i pacchetti lingua mancanti."
+LOCAL9="Installare i codec multimediali (per la sola Base Edition)."
+LOCAL10="Rimuovi tutti i pacchetti non-free dal sistema (opzionale)."
+LOCAL11="Puoi effettuare tutte le operazioni oppure solo quelle selezionate:.\n\nVoi farlo adesso?"
+LOCAL12="Vuoi rimuovere Sparky First Run dal sistema?"
+LOCAL13="Test della connessione Internet fallito!\n\nProbabilmente NON sei connesso ad Internet od il server repository principale è offline. Il procedimento si avvierà automaticamente la prossima volta che il sistema si avvia .\n\nSto uscendo..."
+
+### .desktop file to be translated too
+# Name[it_IT]=Sparky First Run
+# Comment[it_IT]=Utility per il primo avvio di Sparky Linux

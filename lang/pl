@@ -1,0 +1,24 @@
+# Polish localization file for Sparky First Run.
+# Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/24
+# Under the GNU GPL v2
+# Translated to Polish by pavroo
+# Last update 2016/04/23 by pavroo
+
+LOCAL1="Pierwsze Uruchomienie Sparky"
+LOCAL2="Zakończ"
+LOCAL3="It's Live system and it's running the standard Debian's Linux kernel!\n\nIf you would like to install a low-latency Linux kernel from Liquorix, install Sparky on a hard drive then install the kernel as you wish.\n\nExiting now..."
+LOCAL4="Dziękuję za instalację Sparky Linux.\n\nTeraz masz możliwość:"
+LOCAL5="W pełni zaktualizować system (zalecane)."
+LOCAL6="Zainstalować debianowe jądro Linux i686-pae (tylko system 32bitowy)."
+LOCAL7="Zainstalować jądro Linux Liquorix o niskich opóźnieniach."
+#LOCAL7="Zainstalować jądro Linux Liquorix o niskich opóźnieniach (tylko edycje GameOver i Multimedia)."
+LOCAL8="Zainstalować brakujące pakiety językowe."
+LOCAL9="Zainstalować kodeki multimedialne (tylko edycja Base)."
+LOCAL10="Usunąć z systemu pakiety nie-wolne (opcjonalnie)."
+LOCAL11="Możesz wykonać wszystkie powyższe operacje lub tylko wybrane.\n\nCzy chcesz to zrobić teraz?"
+LOCAL12="Czy chcesz usunąć Pierwsze Uruchomienie Sparky z systemu?"
+LOCAL13="Test połączenia z internetem nieudany!\n\nPrawdopodobie NIE jesteś połączony z siecią internet lub główny serwer repozytoriów jest niedostępny. Aplikacja zostanie jeszcze raz uruchomiona, po ponownym uruchomieniu systemu.\n\nWyjście..."
+
+### .desktop file, również do przetłumaczenia
+# Name[pl_PL]=Pierwsze Uruchomienie Sparky
+# Comment[pl_PL]=Pierwsze Uruchomienie SparkyLinux

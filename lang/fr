@@ -1,0 +1,22 @@
+﻿# Fichier de localisation française de Sparky First Run.
+# Copyright 2016 hiver <hiver@club-internet.fr> 2016/05/12
+# Sous licence GNU GPL v2
+# Dernière mise à jour 2016/06/05
+
+LOCAL1="Premier démarrage de Sparky"
+LOCAL2="Quitter"
+LOCAL3="Il s'agit d'un Live system et il tourne avec le noyau standard de Debian!\n\nSi vous voulez installer le noyau linux à faible latence de Liquorix, installer Sparky sur un disque dur et installer ensuite le noyau qui vous convient.\n\nSortie..."
+LOCAL4="Merci d'installer Sparky Linux.\n\nCeci vous permet:"
+LOCAL5="De mettre à jour complètement le système (recommandé)."
+LOCAL6="Installer le noyau Debian Linux i686-pae (système 32bit seulement)."
+LOCAL7="Installer le noyau Liquorix Linux à faible latence."
+LOCAL8="Installer les paquets de langues manquants."
+LOCAL9="Installer les codecs multimedia(Edition de Base seulement)."
+LOCAL10="Retirer les paquets non-libres du système (option)."
+LOCAL11="Vous pouvez exécuter toutes ces tâches une par une ou en sélectionner uniquement une ou certaines.\n\nVoulez-vous le faire maintenant?"
+LOCAL12="Voulez-vous retirer le Premier démarrage de Sparky du système?"
+LOCAL13="Echec du test de la connexion internet!\n\nVous n'êtes probablement pas connecté à Internet ou bien le serveur du projet est hors-service. Cette tâche sera automatiquement relancée au prochain démarrage.\n\nQuittons..."
+
+### .desktop file to be translated too
+# Name[fr_FR]=Premier démarrage de Sparky
+# Comment[fr_FR]=Le Premier démarrage de SparkyLinux

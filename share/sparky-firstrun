@@ -1,0 +1,1 @@
+?package(sparky-firstrun):needs="X11" section="Applications/Utility"        title="Sparky First Run" command="/usr/bin/sparky-firstrun" icon="/usr/share/icons/sparky/firstrun/sparky48.png"

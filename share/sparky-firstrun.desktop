@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Sparky First Run
+Name[pl]=Pierwsze Uruchomienie Sparky
+Comment=The First Run of SparkyLinux
+Comment[pl]=Pierwsze Uruchomienie SparkyLinux
+Exec=/usr/bin/sparky-firstrun
+Icon=/usr/share/icons/sparky/firstrun/sparky48.png
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Applications;Utility
+

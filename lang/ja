@@ -1,0 +1,24 @@
+# Japanese localization file for Sparky First Run.
+# Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/24
+# Under the GNU GPL v2
+# Translated to Japanese by BALLOON a.k.a. Fu-sen.
+# Last update 2016/04/23 by pavroo
+
+LOCAL1="Sparky 初回起動"
+LOCAL2="終了"
+LOCAL3="ライブシステムおよび標準 Debian Linux カーネルで実行されています！\n\nLiquorix から low-latency Linux カーネルをインストールしたい場合は、カーネルをインストールするハードドライブ上の Sparky をインストールします。\n\n終了します..."
+LOCAL4="Sparky Linux のインストール、ありがとうございます。\n\n次の操作を行って下さい:"
+LOCAL5="完全にシステムをアップグレードする (推奨)"
+LOCAL6="Debian i686-PAE Linux カーネルのインストール (32ビットシステムのみ)"
+LOCAL7="Liquorix low-latency Linux カーネルのインストール"
+#LOCAL7="Liquorix low-latency Linux カーネルのインストール (GameOver・マルチメディアエディションのみ)"
+LOCAL8="不足している言語パッケージをインストール"
+LOCAL9="マルチメディアコーデックをインストール (BASE Edition のみ)"
+LOCAL10="システムから非フリーのパッケージを削除 (オプション)"
+LOCAL11="作業を一つずつ、または選択された作業すべてを行うことができます。\n\nおこなってよろしいですか？"
+LOCAL12="システムから Sparky 初回起動 を削除しますか？"
+LOCAL13="インターネット接続に失敗しました！\n\nインターネットに接続されていないか、メインリポジトリサーバがダウンしています。次のシステム起動時にで再び動作を開始します。\n\n終了します..."
+
+### .desktop file to be translated too
+# Name[ja_JP]=Sparky 初回起動
+# Comment[ja_JP]=SparkyLinux はじめての起動

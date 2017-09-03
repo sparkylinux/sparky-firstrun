@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# The sparky-firstrun script created by Paweł "pavroo" Pijanowski 2015/11/23
+# Last update 2016/05/13
+# Copyright 2015, 2016 under the GNU GPL2 License
+
+testroot="`whoami`"
+
+if [ "$testroot" != "root" ]; then
+	echo "must be root, exiting now..."
+	exit 1
+fi
+
+if [ -f /usr/bin/sparky-terminal ]; then
+	SPARKYXTERM="sparky-terminal"
+else
+	SPARKYXTERM="x-terminal-emulator"
+fi
+
+
+$SPARKYXTERM -e "apt-get remove sparky-firstrun -y"
+
+exit 0

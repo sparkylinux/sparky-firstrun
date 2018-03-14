@@ -1,13 +1,13 @@
 #!/bin/sh
 
-# The sparky-firstrun script created by Paweł "pavroo" Pijanowski 2015/11/23
-# Last update 2016/05/13
-# Copyright 2015, 2016 under the GNU GPL2 License
+# The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
+# Copyright 2015-2018 under the GNU GPL2 License
+# Last update 2018/03/14
 
 testroot="`whoami`"
 
 if [ "$testroot" != "root" ]; then
-	echo "must be root, exiting now..."
+	echo "Must be root, exiting now..."
 	exit 1
 fi
 

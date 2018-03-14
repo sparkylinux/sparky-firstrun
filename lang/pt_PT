@@ -2,7 +2,6 @@
 # Copyright 2016 Joel Chaves "Flacc" <joel_chaves@icloud.com> Tuesday 26 January 22:43:00 WET 2016
 # Sob a Licença GNU GPL v2
 # Last update 2016/04/23 by pavroo
-
 LOCAL1="A primeira execução de Sparky"
 LOCAL2="Sair"
 LOCAL3="É um sistema em execução no kernel padrão do Debian Linux!\n\nSe gostaria de instalar um kernel de baixa latência Linux a partir do Liquorix, instale Sparky em um disco rígido, em seguida, instalar o kernel como você desejar.\n\nSaindo agora ..."
@@ -17,7 +16,6 @@ LOCAL10="Remover pacotes que não gratuitos do sistema (opcional)."
 LOCAL11="Pode executar todos os trabalhos, um por um ou aqueles apenas selecionados somente.\n\nDeseja fazê-lo agora?"
 LOCAL12="Gostaria de remover a primeira execução do Sparky do sistema?"
 LOCAL13="Teste de ligação à Internet falhou!\n\nProvavelmente não está conectado à Internet ou o servidor de repositório principal está desligado Isto iniciará novamente no próximos arranques do sistema.\n\nSaindo..."
-
 ### Arquivo a ser traduzido também .desktop 
 # Name[pt _PT]=Sparky First Run
 # Comment[pt_PT]=A primeira execução do SparkyLinux

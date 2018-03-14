@@ -1,19 +1,21 @@
 #!/bin/sh
 
-# The sparky-firstrun script created by Paweł "pavroo" Pijanowski 2015/11/23
-# Copyright 2015, 2016, 2017 under the GNU GPL2 License
-# Last update 2017/05/19
+# The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
+# Copyright 2015-2018 under the GNU GPL2 License
+# Last update 2018/03/14
 
 testroot="`whoami`"
 
 if [ "$testroot" != "root" ]; then
-	echo "must be root, exiting now..."
+	echo "Must be root, exiting now..."
 	exit 1
 fi
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-firstrun"
-if [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+if [ "`cat /etc/default/locale | grep de_DE`" != "" ]; then
+. $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
 . $DEFLOCDIR/es
 elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
 . $DEFLOCDIR/fr

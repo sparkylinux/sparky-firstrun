@@ -2,7 +2,6 @@
 # Copyright 2015 Pawel "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/24
 # Under the GNU GPL v2
 # Last update 2016/04/23 by pavroo
-
 LOCAL1="The First Run of Sparky"
 LOCAL2="Exit"
 LOCAL3="It's Live system and it's running on the standard Debian's Linux kernel!\n\nIf you would like to install a low-latency Linux kernel from Liquorix, install Sparky on a hard drive then install the kernel as you wish.\n\nExiting now..."
@@ -16,7 +15,6 @@ LOCAL10="Remove non-free packages from the system (optional)."
 LOCAL11="You can perform all the jobs one by one or selected one only.\n\nWould you like to do it now?"
 LOCAL12="Would you like to remove The First Run of Sparky from the system?"
 LOCAL13="Internet connection test failed!\n\nProbably you are NOT connected to the Internet or the main repository server is down. This will start again by itself at the next system start-up.\n\nExiting..."
-
 ### .desktop file to be translated too
 # Name[en_US]=Sparky First Run
 # Comment[en_US]=The First Run of SparkyLinux

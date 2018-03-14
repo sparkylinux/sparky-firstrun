@@ -3,7 +3,6 @@
 # Under the GNU GPL v2
 # Translated to Japanese by BALLOON a.k.a. Fu-sen.
 # Last update 2016/04/23 by pavroo
-
 LOCAL1="Sparky 初回起動"
 LOCAL2="終了"
 LOCAL3="ライブシステムおよび標準 Debian Linux カーネルで実行されています！\n\nLiquorix から low-latency Linux カーネルをインストールしたい場合は、カーネルをインストールするハードドライブ上の Sparky をインストールします。\n\n終了します..."
@@ -18,7 +17,6 @@ LOCAL10="システムから非フリーのパッケージを削除 (オプショ
 LOCAL11="作業を一つずつ、または選択された作業すべてを行うことができます。\n\nおこなってよろしいですか？"
 LOCAL12="システムから Sparky 初回起動 を削除しますか？"
 LOCAL13="インターネット接続に失敗しました！\n\nインターネットに接続されていないか、メインリポジトリサーバがダウンしています。次のシステム起動時にで再び動作を開始します。\n\n終了します..."
-
 ### .desktop file to be translated too
 # Name[ja_JP]=Sparky 初回起動
 # Comment[ja_JP]=SparkyLinux はじめての起動

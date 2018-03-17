@@ -2,7 +2,7 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/03/14
+# Last update 2018/03/17
 
 testroot="`whoami`"
 
@@ -106,6 +106,6 @@ fi
 #fi
 
 # remove scripts now to prevent launching them at the next system start up
-/usr/bin/remsu /usr/bin/sparky-firstrun-del
+/usr/bin/sparky-firstrun-del
 
 exit 0

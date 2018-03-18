@@ -2,10 +2,9 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/03/17
+# Last update 2018/03/18
 
 testroot="`whoami`"
-
 if [ "$testroot" != "root" ]; then
 	echo "Must be root, exiting now..."
 	exit 1
@@ -59,6 +58,13 @@ if [ "$PINGTEST" = "" ]; then
 	exit 1
 fi
 
+if [ "$1" = "run" ]; then
+	runmenu
+elif [ "$1" = "del" ]; then
+	delmenu
+fi
+
+runmenu () {
 # upgrade sparky-aptus-upgrade before upgrading all the packages
 $SPARKYXTERM -e "apt-get update"
 $SPARKYXTERM -e "apt-get install sparky-aptus-upgrade -y --force-yes"
@@ -97,7 +103,7 @@ fi
 if [ -f /usr/lib/sparky-aptus/bin/sparky-locale ]; then
 	/usr/lib/sparky-aptus/bin/sparky-locale
 	sleep 1
-fi
+fi	
 
 # remove non-free packages
 #if [ -f /usr/lib/sparky-aptus/bin/nonfree-remove ]; then
@@ -106,6 +112,11 @@ fi
 #fi
 
 # remove scripts now to prevent launching them at the next system start up
-/usr/bin/sparky-firstrun-del
+delmenu
+}
 
-exit 0
+delmenu () {
+$SPARKYXTERM -e "apt-get remove sparky-firstrun -y"
+}
+
+runmenu

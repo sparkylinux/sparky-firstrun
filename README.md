@@ -20,12 +20,12 @@ Dependencies:
 -------------
 apt
 coreutils
-gksu
 grep
 gawk
 iputils-ping
 sparky-aptus
 sparky-aptus-upgrade
+sparky-remsu
 sparky-xterm
 yad
 

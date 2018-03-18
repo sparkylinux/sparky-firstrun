@@ -17,7 +17,6 @@
 if [ "$1" = "uninstall" ]; then
 	rm -f /etc/xdg/autostart/sparky-firstrun.desktop
 	rm -f /usr/bin/sparky-firstrun
-	rm -f /usr/bin/sparky-firstrun-del
 	rm -f /usr/bin/sparky-firstrun-exe
 	rm -f /usr/share/applications/sparky-firstrun.desktop
 	rm -f /usr/share/menu/sparky-firstrun

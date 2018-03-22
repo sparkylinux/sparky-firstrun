@@ -2,7 +2,7 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/03/18
+# Last update 2018/03/22
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -59,64 +59,60 @@ if [ "$PINGTEST" = "" ]; then
 fi
 
 if [ "$1" = "run" ]; then
-	runmenu
-elif [ "$1" = "del" ]; then
-	delmenu
-fi
+	# upgrade sparky-aptus-upgrade before upgrading all the packages
+	$SPARKYXTERM -e "apt-get update"
+	$SPARKYXTERM -e "apt-get install sparky-aptus-upgrade -y --force-yes"
 
-runmenu () {
-# upgrade sparky-aptus-upgrade before upgrading all the packages
-$SPARKYXTERM -e "apt-get update"
-$SPARKYXTERM -e "apt-get install sparky-aptus-upgrade -y --force-yes"
-
-# fully upgrade the system
-if [ -f /usr/bin/sparky-aptus-upgrade ]; then
-	/usr/bin/sparky-aptus-upgrade
-	sleep 1
-fi
-
-# install the i686-pae Debian kernel
-#if [ ! "$ARCH" = "" ]; then
-#	echo "It's 64 bit system. Exiting..."
-#else
-#	if [ -f /usr/lib/sparky-aptus/bin/install-kernel-pae ]; then
-#		/usr/lib/sparky-aptus/bin/install-kernel-pae
-#		sleep 1
-#	fi
-#fi
-
-# install the Liquorix kernel for gaming or multimedia editions only
-if [ -f /usr/bin/sparky-aptus-gamer ] || [ -f /usr/bin/qjackctl ]; then
-	if [ -f /usr/lib/sparky-aptus/bin/install-liquorix ]; then
-		/usr/lib/sparky-aptus/bin/install-liquorix
+	# fully upgrade the system
+	if [ -f /usr/bin/sparky-aptus-upgrade ]; then
+		/usr/bin/sparky-aptus-upgrade
 		sleep 1
 	fi
+
+	# install the i686-pae Debian kernel
+	#if [ ! "$ARCH" = "" ]; then
+	#	echo "It's 64 bit system. Exiting..."
+	#else
+	#	if [ -f /usr/lib/sparky-aptus/bin/install-kernel-pae ]; then
+	#		/usr/lib/sparky-aptus/bin/install-kernel-pae
+	#		sleep 1
+	#	fi
+	#fi
+
+	# install the Liquorix kernel for gaming or multimedia editions only
+	if [ -f /usr/bin/sparky-aptus-gamer ] || [ -f /usr/bin/qjackctl ]; then
+		if [ -f /usr/lib/sparky-aptus/bin/install-liquorix ]; then
+			/usr/lib/sparky-aptus/bin/install-liquorix
+			sleep 1
+		fi
+	fi
+
+	# install multimedia codecs (base editions only - rest of the sparky editions features codecs already)
+	#if [ ! -f /usr/bin/vlc ] && [ -f /usr/bin/sparky-codecs ]; then
+	#	/usr/bin/sparky-codecs
+	#	sleep 1
+	#fi
+
+	# install missing locales
+	if [ -f /usr/lib/sparky-aptus/bin/sparky-locale ]; then
+		/usr/lib/sparky-aptus/bin/sparky-locale
+		sleep 1
+	fi	
+
+	# remove non-free packages
+	#if [ -f /usr/lib/sparky-aptus/bin/nonfree-remove ]; then
+	#	/usr/lib/sparky-aptus/bin/nonfree-remove
+	#	sleep 1
+	#fi
+
+	# remove scripts now to prevent launching them at the next system start up
+	$SPARKYXTERM -e "apt-get remove sparky-firstrun -y"
+	exit 0
+
+
+elif [ "$1" = "del" ]; then
+	$SPARKYXTERM -e "apt-get remove sparky-firstrun -y"
+	exit 0
 fi
 
-# install multimedia codecs (base editions only - rest of the sparky editions features codecs already)
-#if [ ! -f /usr/bin/vlc ] && [ -f /usr/bin/sparky-codecs ]; then
-#	/usr/bin/sparky-codecs
-#	sleep 1
-#fi
-
-# install missing locales
-if [ -f /usr/lib/sparky-aptus/bin/sparky-locale ]; then
-	/usr/lib/sparky-aptus/bin/sparky-locale
-	sleep 1
-fi	
-
-# remove non-free packages
-#if [ -f /usr/lib/sparky-aptus/bin/nonfree-remove ]; then
-#	/usr/lib/sparky-aptus/bin/nonfree-remove
-#	sleep 1
-#fi
-
-# remove scripts now to prevent launching them at the next system start up
-delmenu
-}
-
-delmenu () {
-$SPARKYXTERM -e "apt-get remove sparky-firstrun -y"
-}
-
-runmenu
+exit 0

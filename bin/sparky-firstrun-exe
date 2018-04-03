@@ -2,11 +2,11 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/03/22
+# Last update 2018/03/29
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
-	echo "Must be root, exiting now..."
+	echo "Must be root... Exiting now..."
 	exit 1
 fi
 
@@ -44,10 +44,11 @@ OKEXIT=" --button=Ok:0 --button=$LOCAL2:1 "
 MSGBOX=" --button=Ok:0"
 ARCH=`uname -r | grep "amd64" | awk '{print $1}'`
 
-if [ -f /usr/bin/sparky-terminal ]; then
-	SPARKYXTERM="sparky-terminal"
+if [ -f /usr/bin/sparky-xterm ];then
+	SPARKYXTERM="/usr/bin/sparky-xterm"
 else
-	SPARKYXTERM="x-terminal-emulator"
+	echo "sparky-xterm is missing... Exiting..."
+	exit 1
 fi
 
 # checking connection
@@ -60,8 +61,8 @@ fi
 
 if [ "$1" = "run" ]; then
 	# upgrade sparky-aptus-upgrade before upgrading all the packages
-	$SPARKYXTERM -e "apt-get update"
-	$SPARKYXTERM -e "apt-get install sparky-aptus-upgrade -y --force-yes"
+	$SPARKYXTERM "apt-get update"
+	$SPARKYXTERM "apt-get install sparky-aptus-upgrade -y --force-yes"
 
 	# fully upgrade the system
 	if [ -f /usr/bin/sparky-aptus-upgrade ]; then
@@ -106,12 +107,12 @@ if [ "$1" = "run" ]; then
 	#fi
 
 	# remove scripts now to prevent launching them at the next system start up
-	$SPARKYXTERM -e "apt-get remove sparky-firstrun -y"
+	$SPARKYXTERM "apt-get remove sparky-firstrun -y"
 	exit 0
 
 
 elif [ "$1" = "del" ]; then
-	$SPARKYXTERM -e "apt-get remove sparky-firstrun -y"
+	$SPARKYXTERM "apt-get remove sparky-firstrun -y"
 	exit 0
 fi
 

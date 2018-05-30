@@ -2,7 +2,7 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/03/29
+# Last update 2018/05/30
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -81,12 +81,12 @@ if [ "$1" = "run" ]; then
 	#fi
 
 	# install the Liquorix kernel for gaming or multimedia editions only
-	if [ -f /usr/bin/sparky-aptus-gamer ] || [ -f /usr/bin/qjackctl ]; then
-		if [ -f /usr/lib/sparky-aptus/bin/install-liquorix ]; then
-			/usr/lib/sparky-aptus/bin/install-liquorix
-			sleep 1
-		fi
-	fi
+	#if [ -f /usr/bin/sparky-aptus-gamer ] || [ -f /usr/bin/qjackctl ]; then
+	#	if [ -f /usr/lib/sparky-aptus/bin/install-liquorix ]; then
+	#		/usr/lib/sparky-aptus/bin/install-liquorix
+	#		sleep 1
+	#	fi
+	#fi
 
 	# install multimedia codecs (base editions only - rest of the sparky editions features codecs already)
 	#if [ ! -f /usr/bin/vlc ] && [ -f /usr/bin/sparky-codecs ]; then

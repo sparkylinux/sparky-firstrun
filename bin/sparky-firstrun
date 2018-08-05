@@ -2,27 +2,29 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/05/21
+# Last update 2018/08/05
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-firstrun"
-if [ "`cat /etc/default/locale | grep de_DE`" != "" ]; then
+if [ "`cat /etc/default/locale | grep de`" != "" ]; then
 . $DEFLOCDIR/de
-elif [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
 . $DEFLOCDIR/es
-elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
 . $DEFLOCDIR/fr
-elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep id_ID`" != "" ]; then
+. $DEFLOCDIR/id_ID
+elif [ "`cat /etc/default/locale | grep it`" != "" ]; then
 . $DEFLOCDIR/it
-elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep ja`" != "" ]; then
 . $DEFLOCDIR/ja
-elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
 . $DEFLOCDIR/pl
 elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
 elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
 . $DEFLOCDIR/pt_PT
-elif [ "`cat /etc/default/locale | grep ru_RU`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep ru`" != "" ]; then
 . $DEFLOCDIR/ru
 else
 . $DEFLOCDIR/en
@@ -46,21 +48,10 @@ fi
 
 sleep 6
 
-#if [ -f /usr/bin/sparky-aptus-gamer ] && [ -f /usr/bin/qjackctl ]; then
-#$DIALOG450 $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL4\n\
-#1. $LOCAL5\n\
-#2. $LOCAL7\n\
-#3. $LOCAL8\n\n\
-#$LOCAL11"
-
-#else
-
 $DIALOG450 $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL4\n\
 1. $LOCAL5\n\
 2. $LOCAL8\n\n\
 $LOCAL11"
-
-#fi
 
 if [ "$?" != "1" ]; then
 

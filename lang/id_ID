@@ -1,0 +1,22 @@
+# Indonesian localization file for Sparky First Run.
+# Copyright 2015 Pawel "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/24
+# Under the GNU GPL v2
+# Last update 2018/08/05 by pavroo
+# Translated to Indonesian by les kompie
+LOCAL1="Peluncuran Perdana Sparky"
+LOCAL2="Keluar"
+LOCAL3="Ini adalah sistem Live yang berjalan dengan kernel standar Linux Debian! \n\nJika anda mau menginstal kernel Linux low-latency dari Liquorix, instal Sparky ke hard drive, lalu instal kernel sesuai keinginan.\n\nSekarang keluar... "
+LOCAL4="Terima kasih telah menginstal Sparky Linux.\n\nIni membantu anda:"
+LOCAL5="Upgrade penuh sistem (disarankan)."
+LOCAL6="Instal kernel Linux i686-pae Debian (cuma untuk sistem 32bit)."
+LOCAL7="Instal kernel Linux low-latency Liquorix."
+LOCAL8="Instal paket bahasa yang hilang."
+LOCAL9="Instal codec multimedia (cuma Base Edition)."
+LOCAL10="Hapus paket non-free dari sistem (opsional)."
+LOCAL11="Anda bisa melakukan semua pekerjaan secara satu per satu, atau cuma satu yang dipilih saja.\n\nApakah anda mau melakukannya sekarang?"
+LOCAL12="Apakah anda mau menghapus Peluncuran Perdana Sparky dari sistem?"
+LOCAL13="Uji koneksi internet gagal!\n\nMungkin anda tidak terhubung ke Internet, atau server repositori utama sedang mati. Ini akan dimulai lagi secara otomatis, pada saat menyalakan sistem berikutnya.\n\nKeluar..."
+### .desktop file to be translated too
+# Name[id_ID]=Peluncuran Perdana Sparky
+# Comment[id_ID]=Menjalankan SparkyLinux pertama kali
+

@@ -2,7 +2,7 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/05/30
+# Last update 2018/08/05
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -12,23 +12,25 @@ fi
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-firstrun"
-if [ "`cat /etc/default/locale | grep de_DE`" != "" ]; then
+if [ "`cat /etc/default/locale | grep de`" != "" ]; then
 . $DEFLOCDIR/de
-elif [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
 . $DEFLOCDIR/es
-elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
 . $DEFLOCDIR/fr
-elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep id_ID`" != "" ]; then
+. $DEFLOCDIR/id_ID
+elif [ "`cat /etc/default/locale | grep it`" != "" ]; then
 . $DEFLOCDIR/it
-elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep ja`" != "" ]; then
 . $DEFLOCDIR/ja
-elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
 . $DEFLOCDIR/pl
 elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
 elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
 . $DEFLOCDIR/pt_PT
-elif [ "`cat /etc/default/locale | grep ru_RU`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep ru`" != "" ]; then
 . $DEFLOCDIR/ru
 else
 . $DEFLOCDIR/en
@@ -70,41 +72,11 @@ if [ "$1" = "run" ]; then
 		sleep 1
 	fi
 
-	# install the i686-pae Debian kernel
-	#if [ ! "$ARCH" = "" ]; then
-	#	echo "It's 64 bit system. Exiting..."
-	#else
-	#	if [ -f /usr/lib/sparky-aptus/bin/install-kernel-pae ]; then
-	#		/usr/lib/sparky-aptus/bin/install-kernel-pae
-	#		sleep 1
-	#	fi
-	#fi
-
-	# install the Liquorix kernel for gaming or multimedia editions only
-	#if [ -f /usr/bin/sparky-aptus-gamer ] || [ -f /usr/bin/qjackctl ]; then
-	#	if [ -f /usr/lib/sparky-aptus/bin/install-liquorix ]; then
-	#		/usr/lib/sparky-aptus/bin/install-liquorix
-	#		sleep 1
-	#	fi
-	#fi
-
-	# install multimedia codecs (base editions only - rest of the sparky editions features codecs already)
-	#if [ ! -f /usr/bin/vlc ] && [ -f /usr/bin/sparky-codecs ]; then
-	#	/usr/bin/sparky-codecs
-	#	sleep 1
-	#fi
-
 	# install missing locales
 	if [ -f /usr/lib/sparky-aptus/bin/sparky-locale ]; then
 		/usr/lib/sparky-aptus/bin/sparky-locale
 		sleep 1
-	fi	
-
-	# remove non-free packages
-	#if [ -f /usr/lib/sparky-aptus/bin/nonfree-remove ]; then
-	#	/usr/lib/sparky-aptus/bin/nonfree-remove
-	#	sleep 1
-	#fi
+	fi
 
 	# remove scripts now to prevent launching them at the next system start up
 	$SPARKYXTERM "apt-get remove sparky-firstrun -y"

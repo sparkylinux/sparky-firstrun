@@ -1,0 +1,20 @@
+# Magyar nyelvi fájl a Sparky Első Futtatáshoz (fordítás Nemomen).
+# Copyright 2015 Pawel "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/24
+# GNU GPL v2 szerint
+# Utolsó frissítés pavroo 2016/04/23 by pavroo
+LOCAL1="A Sparky Első Futtatása"
+LOCAL2="Kilépés"
+LOCAL3="Élő rendszer [Live system] és standard Debian Linux kernelen fut!\n\nHa telepíteni kívánja az alacsony-látenciájú Linux kernelt a Liquorixtől, telepítse a merevlemezre a Sparkyt aztán telepítse a kernelt ahogy szeretné.\n\nKilépés most..."
+LOCAL4="Köszönjük, hogy telepítette a Sparky Linuxot.\n\nEz lehetővé teszi Önnek:" 
+LOCAL5="Teljes rendszer-frissítés (ajánlott)."
+LOCAL6="Telepítse a Debian i686-pae Linux kernelt (csak 32bit-es rendszer)!"
+LOCAL7="Telepítse az alacsony-látenciájú Liquorix Linux kernelt!"
+LOCAL8="Telepítse a hiányzó nyelvi csomagokat!"
+LOCAL9="Telepítse a multimédiás kodekeket (csak az alapkiadást) [Base Edition]!"
+LOCAL10="Távolítsa el a rendszerből a ´non-free´ csomagokat (opcionális)!"
+LOCAL11="El tudja végezni az összes feladatot egymás után vagy csak egy kiválasztottat.\n\nKívánja most megtenni?"
+LOCAL12="El kívánja távolítani a rendszerből a Sparky Első Futtatást?"
+LOCAL13="Az Internet kapcsolati teszt sikertelen!\n\nLehet, hogy Ön NEM kapcsolódik az Internet-hálózatra vagy a fő tárolószerver nem érhető el. A következő rendszer indításkor magától elindul.\n\nKilépés..."
+### .az asztali fájl is lefordítandó
+# Név[hu_HU]=Sparky Első Futtatása
+# Megjegyzés[hu_HU]=A Sparky Első Futtatása

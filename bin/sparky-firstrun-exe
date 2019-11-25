@@ -2,7 +2,7 @@
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
 # Copyright 2015-2019 under the GNU GPL2 License
-# Last update 2019/08/22
+# Last update 2019/11/25
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -14,6 +14,8 @@ fi
 DEFLOCDIR="/usr/share/sparky/sparky-firstrun"
 if [ "`cat /etc/default/locale | grep de`" != "" ]; then
 . $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep el`" != "" ]; then
+. $DEFLOCDIR/el
 elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
 . $DEFLOCDIR/es
 elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then

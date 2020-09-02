@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # The sparky-firstrun created by Paweł "pavroo" Pijanowski 2015/11/23
-# Copyright 2015-2019 under the GNU GPL2 License
-# Last update 2019/11/25
+# Copyright 2015-2020 under the GNU GPL2 License
+# Last update 2020/09/02
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -12,29 +12,29 @@ fi
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-firstrun"
-if [ "`cat /etc/default/locale | grep de`" != "" ]; then
+if [ "`cat /etc/default/locale | grep LANG=de`" != "" ]; then
 . $DEFLOCDIR/de
-elif [ "`cat /etc/default/locale | grep el`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=el`" != "" ]; then
 . $DEFLOCDIR/el
-elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=es`" != "" ]; then
 . $DEFLOCDIR/es
-elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=fr`" != "" ]; then
 . $DEFLOCDIR/fr
-elif [ "`cat /etc/default/locale | grep hu`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=hu`" != "" ]; then
 . $DEFLOCDIR/hu
-elif [ "`cat /etc/default/locale | grep id_ID`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=id_ID`" != "" ]; then
 . $DEFLOCDIR/id_ID
-elif [ "`cat /etc/default/locale | grep it`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=it`" != "" ]; then
 . $DEFLOCDIR/it
-elif [ "`cat /etc/default/locale | grep ja`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=ja`" != "" ]; then
 . $DEFLOCDIR/ja
-elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=pl`" != "" ]; then
 . $DEFLOCDIR/pl
-elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
-elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=pt_PT`" != "" ]; then
 . $DEFLOCDIR/pt_PT
-elif [ "`cat /etc/default/locale | grep ru`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=ru`" != "" ]; then
 . $DEFLOCDIR/ru
 else
 . $DEFLOCDIR/en
@@ -67,8 +67,8 @@ fi
 
 if [ "$1" = "run" ]; then
 	# upgrade sparky-aptus-upgrade before upgrading all the packages
-	$SPARKYXTERM "apt-get update"
-	$SPARKYXTERM "apt-get install sparky-aptus-upgrade -y --force-yes"
+	$SPARKYXTERM "dpkg --configure -a && apt-get update"
+	$SPARKYXTERM "apt-get install sparky-aptus-upgrade -y"
 
 	# fully upgrade the system
 	if [ -f /usr/bin/sparky-aptus-upgrade ]; then
@@ -88,7 +88,7 @@ if [ "$1" = "run" ]; then
 
 
 elif [ "$1" = "del" ]; then
-	$SPARKYXTERM "apt-get remove sparky-firstrun -y"
+	$SPARKYXTERM "dpkg --configure -a && apt-get remove sparky-firstrun -y"
 	exit 0
 fi
 

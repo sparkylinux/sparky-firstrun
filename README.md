@@ -1,7 +1,7 @@
 Sparky First Run
-The First Run of Sparky tool helps installing updates, Liquorix kernel, and missing locales at first boot Sparky from a hard drive.
+The First Run of Sparky tool helps installing updates, and missing locales at first boot Sparky from a hard drive.
 
-Copyright (C) 2015-2019 Paweł Pijanowski
+Copyright (C) 2015-2020 Paweł Pijanowski
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ iputils-ping
 sparky-aptus
 sparky-aptus-upgrade
 sparky-remsu
-sparky-xterm (>= 0.2.0)
+sparky-xterm (>= 0.2.7)
 yad
 
 Install:

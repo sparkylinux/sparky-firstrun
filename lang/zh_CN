@@ -1,0 +1,20 @@
+# Chinese(Simplified) localization file for Sparky First Run.
+# Copyright 2015 Pawel "pavroo" Pijanowski <pavroo@onet.eu> 2015/11/24
+# Under the GNU GPL v2
+# Last update 2020/09/12 by xingjiapeng
+LOCAL1="Sparky 首次运行程序"
+LOCAL2="退出"
+LOCAL3="这是 Live 系统，并且运行在标准的 Debian Linux 内核上！\n\n如果您想从 Liquorix 安装一个低延迟的 Linux 内核，请先将 Sparky 安装到硬盘上，然后在安装您想要的内核。\n\n退出中……"
+LOCAL4="感谢安装 SparkyLinux。\n\n本程序可以："
+LOCAL5="完全更新系统（推荐）；"
+LOCAL6="安装 Debian 的 i686-pae Linux 内核（仅 32 位系统）；"
+LOCAL7="安装低延迟 Liquorix Linux 内核；"
+LOCAL8="安装尚未包含的语言包；"
+LOCAL9="安装多媒体解码器（仅 Base Edition）。"
+LOCAL10="从系统中移除非自由软件包（可选）。"
+LOCAL11="您可以逐个执行所有项目，亦可以仅执行其中一项。\n\n您是否想要现在就开始执行？"
+LOCAL12="您是否想要从系统中移除 Sparky 首次运行程序？"
+LOCAL13="网络连接测试失败！\n\n也也许您没有连接到互联网或者主软件仓库服务器不在线。本程序将在系统下一次启动时自动执行。\n\n退出中……"
+### .desktop file to be translated too
+# Name[zh_CN]=Sparky 首次运行
+# Comment[zh_CN]=首次运行 SparkyLinux 时执行

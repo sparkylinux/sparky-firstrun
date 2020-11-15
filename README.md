@@ -23,7 +23,7 @@ coreutils
 grep
 gawk
 iputils-ping
-sparky-aptus
+sparky-aptus-appcenter | sparky-aptus
 sparky-aptus-upgrade
 sparky-remsu
 sparky-xterm (>= 0.2.7)
